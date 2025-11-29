@@ -88,7 +88,12 @@ include('include/header.php');
                                 </div>
                                 <div class="mb-2 col-lg-12">
                                     <label  class="form-label">Password <span>*</span></label>
-                                    <input type="password" class="form-control" required  name="password">
+                                    <div class="input-group">
+                                        <input type="password" class="form-control" required name="password" id="password">
+                                        <span class="input-group-text" onclick="togglePassword()" style="cursor: pointer;">
+                                            <i class="fa fa-eye" id="toggleIcon" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
                                 </div>
                                <div class="col-lg-12 mb-2">
                                 <button type="submit" name="registration" class="btn btn-btnsss">Register</button>
@@ -139,9 +144,23 @@ if(isset($_POST['registration']))
     </div>
 </section>
 
+<script>
+function togglePassword() {
+    var passwordInput = document.getElementById("password");
+    var toggleIcon = document.getElementById("toggleIcon");
 
+    if (passwordInput.type === "password") {
+        passwordInput.type = "text";
+        toggleIcon.classList.remove("fa-eye");
+        toggleIcon.classList.add("fa-eye-slash");
+    } else {
+        passwordInput.type = "password";
+        toggleIcon.classList.remove("fa-eye-slash");
+        toggleIcon.classList.add("fa-eye");
+    }
+}
+</script>
 
-
-<?php 
+<?php
 include('include/footer.php');
 ?>

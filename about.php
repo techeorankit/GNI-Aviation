@@ -54,59 +54,54 @@ include('include/header.php');
  <section class="py-50">
     <div class="container">
         <div class="row">
-            <div class="col-lg-12 text-center whysshead">
+            <div class="col-12 text-center whysshead">
                 <h3>Why GNI Aviation Services?</h3>
             </div>
         </div>
-        <div class="row mt-5">
-            <div class="col-lg-3">
-                <img src="about/one.png" class="w-100" alt="GNI Aviation Mission - Professional Aviation Training">
+
+        <!-- Our Mission -->
+        <div class="row mt-5 align-items-center">
+            <div class="col-md-4 col-12 mb-4 mb-md-0 text-center">
+                <img src="about/one.png" class="img-fluid" style="max-width: 280px;" alt="GNI Aviation Mission - Professional Aviation Training">
             </div>
-            <div class="col-lg-7 whyabu">
+            <div class="col-md-8 col-12 whyabu">
                 <h3> <img src="about/two.png"> Our Mission</h3>
                 <p>Our mission is to train and develop highly skilled Ground Staff and Customer Service professionals who are prepared for rewarding careers in the aviation industry. We aim to create value for both our candidates and our aviation partners by delivering training and manpower solutions that align with real industry needs.</p>
                 <p>By preparing individuals who are knowledgeable, confident, and committed to exceptional service, we help elevate passenger satisfaction, support operational efficiency, and contribute to overall service excellence within airports and airlines.</p>
                 <p>We are equally focused on providing a recruitment process that is structured, transparent, and dependable. Through ethical hiring practices, consistent communication, and quality-driven screening, we assist aviation companies in building a reliable workforce while fostering long-term staff commitment and trust.</p>
             </div>
-            <div class="col-lg-2"></div>
         </div>
 
-
-
-         <div class="row my-5">
-              <div class="col-lg-2"></div>
-            
-            <div class="col-lg-7 whyabu">
+        <!-- Our Vision -->
+        <div class="row my-5 align-items-center">
+            <div class="col-md-8 col-12 order-2 order-md-1 whyabu">
                 <h3> <img src="about/four.png"> Our Vision</h3>
                 <p>Our vision is to become a leading and trusted name in the aviation sector by building a strong, collaborative network between aviation companies, industry partners, and aspiring candidates. We aim to utilize the growing opportunities within the aviation industry to deliver innovative, reliable, and customer-focused solutions for our clients.</p>
                 <p>As a forward-looking aviation training and manpower service provider, we are committed to empowering more students with industry-ready skills and guiding them toward rewarding careers in aviation. We recognize that the aviation industry plays a crucial role in national growth, and we strive to support this advancement by upholding the highest standards in aviation training, airport operations support, and manpower solutions.</p>
                 <p>Through continuous improvement, professional excellence, and a commitment to quality, we aim to contribute to a skilled, efficient, and future-ready aviation workforce while strengthening our position as a preferred partner in the aviation industry.</p>
             </div>
-            <div class="col-lg-3">
-                <img src="about/three.jpg" class="w-100" alt="GNI Aviation Vision - Future of Aviation Training">
+            <div class="col-md-4 col-12 order-1 order-md-2 mb-4 mb-md-0 text-center">
+                <img src="about/three.jpg" class="img-fluid" style="max-width: 280px;" alt="GNI Aviation Vision - Future of Aviation Training">
             </div>
-          
         </div>
 
-
-        <div class="row mt-5">
-            <div class="col-lg-3">
-                <img src="about/five.jpg" class="w-100" alt="GNI Aviation Commitment to Excellence">
+        <!-- Our Commitment -->
+        <div class="row mt-5 align-items-center">
+            <div class="col-md-4 col-12 mb-4 mb-md-0 text-center">
+                <img src="about/five.jpg" class="img-fluid" style="max-width: 280px;" alt="GNI Aviation Commitment to Excellence">
             </div>
-            <div class="col-lg-7 whyabu">
+            <div class="col-md-8 col-12 whyabu">
                 <h3> <img src="about/six.png"> Our Commitment</h3>
                 <p>We are committed to delivering exceptional aviation training and manpower services that consistently meet the expectations of both our candidates and our corporate partners. Our approach is rooted in professionalism, operational integrity, and a steadfast focus on service excellence. </p>
                 <p>We emphasize accountability at every stage—ensuring that our training processes, support systems, and recruitment solutions are aligned with the highest industry standards. By fostering a culture of trust and reliability, we aim to build long-term partnerships that reflect our dedication to quality and performance.</p>
                 <p>Our customers remain at the core of our operations. We recognize their expectations and are committed to providing a superior service experience marked by responsiveness, consistency, and a continuous pursuit of excellence. Through this unwavering commitment, we reinforce our position as a trusted and dependable leader in aviation services.</p>
-               
             </div>
-            <div class="col-lg-2"></div>
         </div>
-         <div class="row my-5">
-              <div class="col-lg-2"></div>
-            
-            <div class="col-lg-7 whyabu">
-                <h3> <img src="about/seven.png">Why Us?</h3>
+
+        <!-- Why Us -->
+        <div class="row my-5 align-items-center">
+            <div class="col-12 whyabu">
+                <h3> <img src="about/seven.png"> Why Us?</h3>
                 <p><b>Government-Registered & Industry-Certified Aviation Service Provider</b></p>
                 <p>As a fully compliant organization registered under the Companies Act, we are recognized for delivering reliable, high-quality aviation training and manpower solutions trusted by leading airports and aviation companies.</p>
                 <p><b>Experienced Aviation Professionals & Certified Trainers</b></p>
@@ -129,10 +124,6 @@ include('include/header.php');
                 <p><b>Consistent Results & Trusted Brand Reputation</b></p>
                 <p>Our long-standing track record in aviation training, staffing, and airport job placements has made us a trusted and reputable brand among aspiring aviation professionals.</p>
             </div>
-            <div class="col-lg-3">
-                <img src="about/thirteen.jpg" class="w-100" alt="Why Choose GNI Aviation Services">
-            </div>
-          
         </div>
     </div>
  </section>
