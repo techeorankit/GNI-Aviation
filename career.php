@@ -23,12 +23,12 @@ include('include/header.php');
             <div class="col-lg-9">
                 <div class="row">
                     <div class="col-lg-12 mb-4 careerfnts">
-                        <h3>Airline Career Management at Noida International Airport</h3>
+                        <h1>Airline Career Management at Noida International Airport</h1>
                     </div>
                     <div class="col-lg-4 ">
-                          <img src="career/two.jpg" class="mt-4 w-100">
-                    <img src="career/one.jpg" class="w-100">
-                  
+                          <img src="career/two.jpg" class="mt-4 w-100" alt="Airline Career Management at Noida International Airport">
+                    <img src="career/one.jpg" class="w-100" alt="Aviation Career Opportunities at GNI Aviation">
+
                     </div>
                     <div class="col-lg-8 fnsssst">
                         <p>Greater Noida International Aviation Services Pvt. Ltd. offers a comprehensive <b>Airline Career Management</b> program designed to develop skilled, industry-ready professionals for the aviation sector. Our career management system supports <b>career growth in airlines, airport operations, ground handling, and customer service roles</b> at Noida International Airport,Jewar, U.P</p>
@@ -52,8 +52,8 @@ include('include/header.php');
                         
                     </div>
                     <div class="col-lg-4 ">
-                        <img src="career/three.jpeg" class="w-100">
-                    </div>      
+                        <img src="career/three.jpeg" class="w-100" alt="GNI Aviation Expert Faculty and Trainers">
+                    </div>
                 </div>
 
 

@@ -23,11 +23,11 @@ include('include/header.php');
             <div class="col-lg-9">
                 <div class="row">
                     <div class="col-lg-12 mb-4 careerfnts">
-                        <h3>Training</h3>
+                        <h1>Aviation Training & Manpower Services</h1>
                     </div>
                     <div class="col-lg-4 ">
                        
-                     <img src="about/nine.png" class="mt-4 w-100">
+                     <img src="about/nine.png" class="mt-4 w-100" alt="GNI Aviation Training Programs - Professional Aviation Education">
                     </div>
                     <div class="col-lg-8 fnsssst">
                         <p>At Greater Noida International Aviation Services Private Limited, our training division is built on the principle that excellence in aviation begins with excellence in learning. We deliver a structured, high-performance training ecosystem designed to develop capable, confident, and industry-ready professionals who can meet the rigorous demands of aviation and airport operations.</p>
@@ -55,7 +55,7 @@ include('include/header.php');
                     <div class="col-lg-4 ">
                         <div class="bgcbluesss">
                             <h3>What do our Captain say?</h3>
-                            <img src="career/four.jpg" class="w-100">
+                            <img src="career/four.jpg" class="w-100" alt="Captain Sunderam - GNI Aviation Recommendation">
                             <p>GNI Aviation, proudly recommended by Captain Sunderam, is committed to providing outstanding manpower services and shaping skilled aviation professionals. With expert guidance, world-class training, and a strong reputation in the industry, we offer a trusted pathway to a stable and rewarding aviation career. Join us to gain confidence, discipline, and opportunities that help you grow, succeed, and achieve your dreams in the aviation sector.</p>
                         </div>
                     </div>      

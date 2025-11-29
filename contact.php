@@ -21,8 +21,8 @@ include('include/header.php');
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center fontsssd">
-                <h3>We have the answers to all your queries.</h3>
-                <p>If you have a query or feedback for us,we will love to hear from you.</p>
+                <h1>Contact GNI Aviation Services</h1>
+                <p>We have the answers to all your queries. If you have a query or feedback for us, we will love to hear from you.</p>
             </div>
         </div>
         <div class="row mt-5">

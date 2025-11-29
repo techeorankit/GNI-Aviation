@@ -6,13 +6,13 @@ include('include/header.php');
   <div class="carousel-inner">
   
     <div class="carousel-item active">
-      <img src="img/bg-1.jpg" class="d-block w-100 mblbanner" alt="...">
+      <img src="img/bg-1.jpg" class="d-block w-100 mblbanner" alt="GNI Aviation Services - Aviation Training at Noida International Airport Jewar">
     </div>
     <div class="carousel-item">
-      <img src="img/bg-2.jpg" class="d-block w-100 mblbanner" alt="...">
+      <img src="img/bg-2.jpg" class="d-block w-100 mblbanner" alt="Airport Ground Staff Training and Placement - GNI Aviation">
     </div>
       <div class="carousel-item ">
-      <img src="img/bg-5.jpg" class="d-block w-100 mblbanner" alt="...">
+      <img src="img/bg-5.jpg" class="d-block w-100 mblbanner" alt="Airline Career Opportunities - Apply for Airport Jobs">
     </div>
     <!-- <div class="carousel-item">
       <img src="img/bg-4.jpg" class="d-block w-100 mblbanner" alt="...">
@@ -31,27 +31,8 @@ include('include/header.php');
   </button>
 </div>
 
-    <!-- Alternative Hero  -->
-    <!--<div class="hero-alt justify-content-center" style="background-image: url(img/banner.jpg)">-->
-    <!--  <div class="hero-alt__content">-->
-    <!--    <div class="container">-->
-    <!--      <div class="row g-3 justify-content-center">-->
-    <!--        <div class="col-md-8 col-xl-7 col-xxl-6 text-center">-->
-    <!--          <h1 class="hero-alt__content-title text-capitalize t-text-white">-->
-    <!--            True Your Own Dream With GNI Aviation-->
-    <!--          </h1>-->
-    <!--          <p class="t-text-white text-center t-short-para mx-auto">-->
-    <!--            Empowering futures through excellence in aviation, hospitality, and service training.-->
-    <!--          </p>-->
-    <!--          <a href="#" class="btn btn--xxl btn--primary mt-3">-->
-    <!--            View More-->
-    <!--          </a>-->
-    <!--        </div>-->
-    <!--      </div>-->
-    <!--    </div>-->
-    <!--  </div>-->
-    <!--</div>-->
-    <!-- Alternative Hero End -->
+    <!-- SEO H1 Tag - Visually hidden but accessible for SEO -->
+    <h1 class="visually-hidden">GNI Aviation Services - Aviation Training & Airport Jobs at Noida International Airport Jewar</h1>
     
     <div class="box-bgs bgcclr">
         <div class="container">
@@ -363,7 +344,7 @@ if ($querynotification && mysqli_num_rows($querynotification) > 0) {
       <div class="col-lg-12 mblmrsssgd">
         <div class="row">
           <div class="col-lg-12 ">
-            <img src="img/adver.jpg" class="pl-50" alt="">
+            <img src="img/adver.jpg" class="pl-50" alt="Noida International Airport Jewar Terminal - Aviation Career Opportunities">
              <div class="bgcclrs">
               <h3> Jewar Terminal</h3>
               <p>The Jewar Terminal has been designed to handle millions of passengers annually with modern amenities and future-ready systems. It reflects a blend of efficiency, sustainability, and global standards, making it one of the most anticipated terminals in India.</p>
@@ -492,7 +473,7 @@ if ($querynotification && mysqli_num_rows($querynotification) > 0) {
         <div class="row">
           <div class="col-md-6 col-lg-3">
             <div class="service-g bg-blue">
-                <img src="job-roll/one.jpg">
+                <img src="job-roll/one.jpg" alt="Airport Ground Staff Jobs - GNI Aviation Training">
                 <h4 class="mt-0">
                   <a href="#" class="t-link t-link--primary d-block text-capitalize">
                     Airport Ground Staff
@@ -502,96 +483,96 @@ if ($querynotification && mysqli_num_rows($querynotification) > 0) {
           </div>
           <div class="col-md-6 col-lg-3">
             <div class="service-g bg-sky">
-                 <img src="job-roll/two.jpg">
+                 <img src="job-roll/two.jpg" alt="Airport Loader Jobs at Noida International Airport">
                 <h4 class="mt-0">
                   <a href="#" class="t-link t-link--primary d-block text-capitalize t-text-white">
-                    Airport Loaders 
+                    Airport Loaders
                   </a>
                 </h4>
             </div>
           </div>
           <div class="col-md-6 col-lg-3">
              <div class="service-g bg-blue">
-                  <img src="job-roll/three.jpg">
+                  <img src="job-roll/three.jpg" alt="Airport Security Staff Training and Jobs">
                 <h4 class="mt-0">
                   <a href="#" class="t-link t-link--primary d-block text-capitalize t-text-white">
-                   Airport Security Staff 
+                   Airport Security Staff
                   </a>
                 </h4>
             </div>
           </div>
           <div class="col-md-6 col-lg-3">
             <div class="service-g bg-sky">
-                 <img src="job-roll/four.jpg">
+                 <img src="job-roll/four.jpg" alt="Ramp Executive Career at Airport">
                 <h4 class="mt-0">
                   <a href="#" class="t-link t-link--primary d-block text-capitalize t-text-white">
-                    Ramp Executive 
+                    Ramp Executive
                   </a>
                 </h4>
             </div>
           </div>
-          
+
           <div class="col-md-6 col-lg-3">
              <div class="service-g bg-sky">
-                  <img src="job-roll/five.jpg">
+                  <img src="job-roll/five.jpg" alt="Airport Cargo Staff Jobs and Training">
                 <h4 class="mt-0">
                   <a href="#" class="t-link t-link--primary d-block text-capitalize t-text-white">
-                   Airport Cargo Staff 
+                   Airport Cargo Staff
                   </a>
                 </h4>
             </div>
           </div>
-          
+
           <div class="col-md-6 col-lg-3">
              <div class="service-g bg-blue">
-                  <img src="job-roll/six.jpg">
+                  <img src="job-roll/six.jpg" alt="Front Desk Receptionist Jobs at Airport">
                 <h4 class="mt-0">
                   <a href="#" class="t-link t-link--primary d-block text-capitalize t-text-white">
-                    Front Desk Receptionist 
+                    Front Desk Receptionist
                   </a>
                 </h4>
             </div>
           </div>
-          
+
           <div class="col-md-6 col-lg-3">
              <div class="service-g bg-sky">
-                  <img src="job-roll/seven.jpg">
+                  <img src="job-roll/seven.jpg" alt="Air Ticketing Executive Career Opportunities">
                 <h4 class="mt-0">
                   <a href="#" class="t-link t-link--primary d-block text-capitalize t-text-white">
-                   Air Ticketing Executive 
+                   Air Ticketing Executive
                   </a>
                 </h4>
             </div>
           </div>
-          
+
           <div class="col-md-6 col-lg-3">
              <div class="service-g bg-blue">
-                  <img src="job-roll/eight.jpg">
-             
+                  <img src="job-roll/eight.jpg" alt="Airport Housekeeping Staff Positions">
+
                 <h4 class="mt-0">
                   <a href="#" class="t-link t-link--primary d-block text-capitalize t-text-white">
-                    Housekeeping Staff 
+                    Housekeeping Staff
                   </a>
                 </h4>
             </div>
           </div>
-          
-     
-          
+
+
+
           <div class="col-md-6 col-lg-3">
              <div class="service-g bg-blue">
-                  <img src="job-roll/nine.jpg">
+                  <img src="job-roll/nine.jpg" alt="VIP Lounge Staff Jobs at Airport">
                 <h4 class="mt-0">
                   <a href="#" class="t-link t-link--primary d-block text-capitalize t-text-white">
-                    VIP Lounge Staff 
+                    VIP Lounge Staff
                   </a>
                 </h4>
             </div>
           </div>
-          
+
           <div class="col-md-6 col-lg-3">
              <div class="service-g bg-sky">
-                  <img src="job-roll/ten.jpg">
+                  <img src="job-roll/ten.jpg" alt="Airport Supervisor Positions">
                 <h4 class="mt-0">
                   <a href="#" class="t-link t-link--primary d-block text-capitalize t-text-white">
                      Supervisor
@@ -599,21 +580,21 @@ if ($querynotification && mysqli_num_rows($querynotification) > 0) {
                 </h4>
             </div>
           </div>
-          
+
           <div class="col-md-6 col-lg-3">
              <div class="service-g bg-blue">
-                  <img src="job-roll/eleven.jpg">
+                  <img src="job-roll/eleven.jpg" alt="Retail Outlet Executive Jobs at Airport">
                 <h4 class="mt-0">
                   <a href="#" class="t-link t-link--primary d-block text-capitalize t-text-white">
-                     Retail Outlet Executive 
+                     Retail Outlet Executive
                   </a>
                 </h4>
             </div>
           </div>
-          
+
           <div class="col-md-6 col-lg-3">
              <div class="service-g bg-sky">
-                  <img src="job-roll/twelve.jpg">
+                  <img src="job-roll/twelve.jpg" alt="Other Airport Job Opportunities">
                 <h4 class="mt-0">
                   <a href="#" class="t-link t-link--primary d-block text-capitalize t-text-white">
                      Others
@@ -653,7 +634,7 @@ if ($querynotification && mysqli_num_rows($querynotification) > 0) {
                <div class="feedback-slider__item">
                 <div class="feedback-card bg--light-1">
                   <div class="feedback-card__profile mb-4">
-                    <img src="testimonial/one.jpeg" alt="" class="feedback-card__profile-img flex-shrink-0">
+                    <img src="testimonial/one.jpeg" alt="Sourav - GNI Aviation Success Story" class="feedback-card__profile-img flex-shrink-0">
                     <div class="feedback-card__profile-info">
                       <h6 class="feedback-card__profile-name fw-md text-capitalize mb-0">
                        Sourav
@@ -701,7 +682,7 @@ if ($querynotification && mysqli_num_rows($querynotification) > 0) {
                <div class="feedback-slider__item">
                 <div class="feedback-card bg--light-1">
                   <div class="feedback-card__profile mb-4">
-                    <img src="testimonial/two.jpeg" alt="" class="feedback-card__profile-img flex-shrink-0">
+                    <img src="testimonial/two.jpeg" alt="Santosh Kumar - Aviation Job Placement Success" class="feedback-card__profile-img flex-shrink-0">
                     <div class="feedback-card__profile-info">
                       <h6 class="feedback-card__profile-name fw-md text-capitalize mb-0">
                        Santosh Kumar
@@ -749,7 +730,7 @@ if ($querynotification && mysqli_num_rows($querynotification) > 0) {
               <div class="feedback-slider__item">
                 <div class="feedback-card bg--light-1">
                   <div class="feedback-card__profile mb-4">
-                    <img src="assets/img/team-1.jpg" alt="" class="feedback-card__profile-img flex-shrink-0">
+                    <img src="assets/img/team-1.jpg" alt="Rajeev Kumar - GNI Aviation Trainee Testimonial" class="feedback-card__profile-img flex-shrink-0">
                     <div class="feedback-card__profile-info">
                       <h6 class="feedback-card__profile-name fw-md text-capitalize mb-0">
                        Rajeev Kumar
@@ -794,7 +775,7 @@ if ($querynotification && mysqli_num_rows($querynotification) > 0) {
               <div class="feedback-slider__item">
                 <div class="feedback-card bg--light-1">
                   <div class="feedback-card__profile mb-4">
-                    <img src="assets/img/team-2.jpg" alt="" class="feedback-card__profile-img flex-shrink-0">
+                    <img src="assets/img/team-2.jpg" alt="Jatin Kumar - Airport Job Placement Testimonial" class="feedback-card__profile-img flex-shrink-0">
                     <div class="feedback-card__profile-info">
                       <h6 class="feedback-card__profile-name fw-md text-capitalize mb-0">
                         Jatin Kumar

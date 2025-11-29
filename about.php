@@ -25,7 +25,7 @@ include('include/header.php');
                
           <div class="row">
             <div class="col-lg-12 contsctabut">
-              <h3>About GNI Aviation</h3>
+              <h1>About GNI Aviation</h1>
             </div>
             <div class="col-lg-8 avitsss">
               <p>Greater Noida International Aviation Services Private Limited, founded in 2025, has emerged as a prominent organization in the domain of aviation training and manpower solutions in India. Over the course of a decade, the company has demonstrated sustained excellence by delivering sophisticated, industry-compliant training programs and end-to-end manpower services tailored to the advanced operational requirements of the aviation and airport services sector.</p>
@@ -60,7 +60,7 @@ include('include/header.php');
         </div>
         <div class="row mt-5">
             <div class="col-lg-3">
-                <img src="about/one.png" class="w-100" alt="">
+                <img src="about/one.png" class="w-100" alt="GNI Aviation Mission - Professional Aviation Training">
             </div>
             <div class="col-lg-7 whyabu">
                 <h3> <img src="about/two.png"> Our Mission</h3>
@@ -83,7 +83,7 @@ include('include/header.php');
                 <p>Through continuous improvement, professional excellence, and a commitment to quality, we aim to contribute to a skilled, efficient, and future-ready aviation workforce while strengthening our position as a preferred partner in the aviation industry.</p>
             </div>
             <div class="col-lg-3">
-                <img src="about/three.jpg" class="w-100" alt="">
+                <img src="about/three.jpg" class="w-100" alt="GNI Aviation Vision - Future of Aviation Training">
             </div>
           
         </div>
@@ -91,7 +91,7 @@ include('include/header.php');
 
         <div class="row mt-5">
             <div class="col-lg-3">
-                <img src="about/five.jpg" class="w-100" alt="">
+                <img src="about/five.jpg" class="w-100" alt="GNI Aviation Commitment to Excellence">
             </div>
             <div class="col-lg-7 whyabu">
                 <h3> <img src="about/six.png"> Our Commitment</h3>
@@ -130,7 +130,7 @@ include('include/header.php');
                 <p>Our long-standing track record in aviation training, staffing, and airport job placements has made us a trusted and reputable brand among aspiring aviation professionals.</p>
             </div>
             <div class="col-lg-3">
-                <img src="about/thirteen.jpg" class="w-100" alt="">
+                <img src="about/thirteen.jpg" class="w-100" alt="Why Choose GNI Aviation Services">
             </div>
           
         </div>

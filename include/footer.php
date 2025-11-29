@@ -7,7 +7,7 @@
               <div class="row g-4 align-items-lg-center">
                 <div class="col-12 col-lg-3 col-xl-2">
                   <div class="text-center">
-                    <img src="img/logo-footer.png" style="padding:10px;" alt="" class="img-fluid">
+                    <img src="img/logo-footer.png" style="padding:10px;" alt="GNI Aviation Services Footer Logo" class="img-fluid">
                   </div>
                 </div>
                 <div class="col-12 col-lg-9 col-xl-10">
@@ -137,22 +137,22 @@
               <h4 class="mt-0 futrfont t-text-white text-capitalize">gallery</h4>
               <ul class="insta-gallery">
                 <li class="insta-gallery__list">
-                  <img src="assets/img/gal-1.png" alt="viserfly" class="insta-gallery__img">
+                  <img src="assets/img/gal-1.png" alt="GNI Aviation Training Gallery Image 1" class="insta-gallery__img">
                 </li>
                 <li class="insta-gallery__list">
-                  <img src="assets/img/gal-2.png" alt="viserfly" class="insta-gallery__img">
+                  <img src="assets/img/gal-2.png" alt="Airport Training Session Photo" class="insta-gallery__img">
                 </li>
                 <li class="insta-gallery__list">
-                  <img src="assets/img/gal-3.png" alt="viserfly" class="insta-gallery__img">
+                  <img src="assets/img/gal-3.png" alt="Aviation Career Placement Event" class="insta-gallery__img">
                 </li>
                 <li class="insta-gallery__list">
-                  <img src="assets/img/gal-4.png" alt="viserfly" class="insta-gallery__img">
+                  <img src="assets/img/gal-4.png" alt="GNI Aviation Students Training" class="insta-gallery__img">
                 </li>
                 <li class="insta-gallery__list">
-                  <img src="assets/img/gal-5.png" alt="viserfly" class="insta-gallery__img">
+                  <img src="assets/img/gal-5.png" alt="Airport Job Interview Preparation" class="insta-gallery__img">
                 </li>
                 <li class="insta-gallery__list">
-                  <img src="assets/img/gal-6.png" alt="viserfly" class="insta-gallery__img">
+                  <img src="assets/img/gal-6.png" alt="Aviation Industry Placement Success" class="insta-gallery__img">
                 </li>
               </ul>
             </div>

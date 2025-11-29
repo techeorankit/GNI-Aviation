@@ -24,11 +24,11 @@ include('include/header.php');
             <div class="col-lg-9">
                 <div class="row">
                     <div class="col-lg-12 mb-4 careerfnts">
-                        <h3>Airline Job Selection & Recruitment</h3>
+                        <h1>Airline Job Selection & Recruitment Process</h1>
                     </div>
                     <div class="col-lg-4 fntsssdb">
                        
-                    <img src="img/selection.jpg" class="w-100">
+                    <img src="img/selection.jpg" class="w-100" alt="Airline Job Selection and Recruitment Process at GNI Aviation">
                     <p>Selection for airline jobs is a prime focus at GNI Aviation for its trainees, which is certainly a must to attain for the incessant growth of the company.</p>
                     <!-- <img src="about/ten.png" class="w-100 mt-4">
                     <p>We were a batch of 20 candidates, and all of us got selected for AISATS. It has been more than 1.5 years, and we are all happily working at the Airport.</p> -->

@@ -1,0 +1,30 @@
+# Robots.txt for GNI Aviation Services
+# https://gniasjewar.com
+
+User-agent: *
+Allow: /
+
+# Allow all major search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# Disallow admin and sensitive areas
+Disallow: /admin/
+Disallow: /connection.php
+Disallow: /include/
+
+# Disallow temporary and cache files
+Disallow: /*.sql$
+
+# Sitemap location
+Sitemap: https://gniasjewar.com/sitemap.xml
+
+# Crawl delay (optional - helps prevent server overload)
+Crawl-delay: 10
+
