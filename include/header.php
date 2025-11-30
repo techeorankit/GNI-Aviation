@@ -273,23 +273,19 @@ $canonical_url = $site_url . '/' . ($page == 'index' ? '' : $page . '.php');
     <!-- Header  -->
      <section class="bgcgrayss">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-12 tpfntssd">
-                 <p>New Delhi | <a href="#"><i class="bx bxs-phone" aria-hidden="true"></i> +91-9217277714</a></p>
+            <div class="row align-items-center">
+                <div class="col-lg-4 col-12 tpfntssd">
+                    <p>New Delhi | <a href="#"><i class="bx bxs-phone" aria-hidden="true"></i> +91-9217277714</a></p>
                 </div>
-                <div class="col-lg-6 col-12 mlbnoness">
-                    <div class="row">
-                        <div class="col-lg-6 col-12 imgsss text-center">
-                            <img src="img/flag.png" alt="Indian Flag - GNI Aviation Services">
-                        </div>
-                        <div class="col-lg-6 col-12">
-                            <ul class="spcallsss">
-                            <li><a href="https://www.facebook.com/gniaviationservices" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
+                <div class="col-lg-4 col-12 imgsss text-center mlbnoness">
+                    <img src="img/flag.png" alt="Indian Flag - GNI Aviation Services">
+                </div>
+                <div class="col-lg-4 col-12 mlbnoness">
+                    <ul class="spcallsss">
+                        <li><a href="https://www.facebook.com/gniaviationservices" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -346,7 +342,7 @@ $canonical_url = $site_url . '/' . ($page == 'index' ? '' : $page . '.php');
           <div class="col-6 d-lg-none">
             <!-- Logo  -->
             <a href="index.php" class="logo">
-              <img src="img/logo.png" alt="GNI Aviation Services Logo" class="img-fluid logo__is">
+              <img src="img/logo-footer.png" alt="GNI Aviation Services Logo" class="img-fluid logo__is">
             </a>
             <!-- Logo End -->
           </div>

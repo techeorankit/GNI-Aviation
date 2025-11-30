@@ -7,7 +7,7 @@
               <div class="row g-4 align-items-lg-center">
                 <div class="col-12 col-lg-3 col-xl-2">
                   <div class="text-center">
-                    <img src="img/logo-footer.png" style="padding:10px;" alt="GNI Aviation Services Footer Logo" class="img-fluid">
+                    <img src="img/logo-footer.png" style="padding:10px;" alt="GNI Aviation Services Footer Logo" class="img-fluid footer-logo">
                   </div>
                 </div>
                 <div class="col-12 col-lg-9 col-xl-10">
@@ -66,12 +66,7 @@
                 </li>
                 <li class="list--row__item">
                   <a href="#" class="t-link social-icon--alt">
-                    <i class="bx bxl-vimeo"></i>
-                  </a>
-                </li>
-                <li class="list--row__item">
-                  <a href="#" class="t-link social-icon--alt">
-                    <i class="bx bxl-pinterest-alt"></i>
+                    <i class="bx bxl-youtube"></i>
                   </a>
                 </li>
               </ul>
