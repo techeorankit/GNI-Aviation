@@ -23,7 +23,7 @@ include('include/header.php');
             <div class="col-lg-9">
                 <div class="row">
                     <div class="col-lg-12 mb-4 careerfnts">
-                        <h1>Aviation Training & Manpower Services</h1>
+                        <h3>Aviation Training & Manpower Services</h1>
                     </div>
                     <div class="col-lg-4 ">
                        

@@ -358,6 +358,10 @@ $canonical_url = $site_url . '/' . ($page == 'index' ? '' : $page . '.php');
 
               <!-- Navigation  -->
               <nav class="navs">
+                <!-- Close Button for Mobile -->
+                <button type="button" class="nav-close-btn d-lg-none">
+                  <i class="bx bx-x"></i>
+                </button>
                 <!-- Primary Menu  -->
                 <ul class="list primary-menu w-100">
                   <li class="primary-menu__list">

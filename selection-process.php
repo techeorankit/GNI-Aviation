@@ -24,7 +24,7 @@ include('include/header.php');
             <div class="col-lg-9">
                 <div class="row">
                     <div class="col-lg-12 mb-4 careerfnts">
-                        <h1>Airline Job Selection & Recruitment Process</h1>
+                        <h3>Airline Job Selection & Recruitment Process</h1>
                     </div>
                     <div class="col-lg-4 fntsssdb">
                        

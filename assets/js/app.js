@@ -4,12 +4,34 @@
   $(document).ready(function () {
     // Mobile Menu Dropdown
     const mobileNavToggler = document.querySelector(".nav--toggle");
+    const navCloseBtn = document.querySelector(".nav-close-btn");
     const body = document.querySelector("body");
+
     if (mobileNavToggler) {
       mobileNavToggler.addEventListener("click", function () {
-        body.classList.toggle("nav-toggler");
+        body.classList.add("nav-toggler");
       });
     }
+
+    // Close button for mobile nav dialog
+    if (navCloseBtn) {
+      navCloseBtn.addEventListener("click", function () {
+        body.classList.remove("nav-toggler");
+      });
+    }
+
+    // Close nav when clicking on backdrop (outside the action sheet)
+    document.addEventListener("click", function (e) {
+      if (body.classList.contains("nav-toggler")) {
+        const navs = document.querySelector(".primary-menu--dark .navs");
+        const isClickInsideNav = navs && navs.contains(e.target);
+        const isClickOnToggler = mobileNavToggler && mobileNavToggler.contains(e.target);
+
+        if (!isClickInsideNav && !isClickOnToggler) {
+          body.classList.remove("nav-toggler");
+        }
+      }
+    });
     // Mobile Menu Dropdown End
 
     // Mobile Submenu

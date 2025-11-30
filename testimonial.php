@@ -21,7 +21,7 @@ include('include/header.php');
     <div class="container">
         <div class="row mb-5">
             <div class="col-lg-12 text-center testiheads">
-                <h3>Our Testimonial's</h3>
+                <h3>Our Testimonials</h3>
             </div>
         </div>
         <div class="row mt-4 mrgssd">

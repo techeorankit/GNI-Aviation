@@ -23,7 +23,7 @@ include('include/header.php');
             <div class="col-lg-9">
                 <div class="row">
                     <div class="col-lg-12 mb-4 careerfnts">
-                        <h1>Airline Career Management at Noida International Airport</h1>
+                        <h3>Airline Career Management at Noida International Airport</h1>
                     </div>
                     <div class="col-lg-4 ">
                           <img src="career/two.jpg" class="mt-4 w-100" alt="Airline Career Management at Noida International Airport">
@@ -39,7 +39,7 @@ include('include/header.php');
                     </div>
                 </div>
 
-                <div class="row">
+                <div class="row mt-4">
                     <div class="col-lg-12 mb-4 careerfnts">
                         <h3>Our Faculty</h3>
                     </div>
