@@ -280,10 +280,11 @@ mysqli_set_charset($link, "utf8mb4");
  <!-- end add data section --->
 
  <!-- start update data section --->
-  <?php 
+  <?php
   if(isset($_POST['addnotifications']))
   {
-    $notification_cont = $_POST['notification_cont'];
+    // Sanitize user input to prevent SQL injection
+    $notification_cont = mysqli_real_escape_string($link, $_POST['notification_cont']);
     $updatenotification = "INSERT INTO `notification`(`notification_cont`) VALUES ('$notification_cont')";
     if(mysqli_query($link,$updatenotification))
     {
@@ -297,20 +298,21 @@ mysqli_set_charset($link, "utf8mb4");
   ?>
 <!-- end update data section --->
 
-<?php 
+<?php
 if(isset($_POST['notificationupdate']))
 {
-    $nuid  = $_POST['nuid'];
-    $noticefication_cont = $_POST['noticefication_cont'];
+    // Sanitize user inputs to prevent SQL injection
+    $nuid  = intval($_POST['nuid']);
+    $noticefication_cont = mysqli_real_escape_string($link, $_POST['noticefication_cont']);
     $updatesnotic = "UPDATE `notification` SET `notification_cont`='$noticefication_cont' WHERE `id`='$nuid'";
     if(mysqli_query($link,$updatesnotic))
     {
         echo "<script>alert('Update Successfully...!!');window.location.href=''</script>";
     }else
     {
-        echo "<Script>alert('Try Again..!!');window.location.href=''</script>";
+        echo "<script>alert('Try Again..!!');window.location.href=''</script>";
     }
-    
+
 }
 ?>
 

@@ -1,5 +1,13 @@
-<?php 
+<?php
+session_start();
 include ('connection.php');
+
+// Check if user is logged in
+$userid = $_SESSION['user_id'] ?? 0;
+if($userid == 0) {
+    echo "<script>window.location.href='index.php'</script>";
+    exit;
+}
 ?>
 
 <!DOCTYPE html>
@@ -85,11 +93,17 @@ include ('connection.php');
             </section>
             <!-- Main content -->
              
-<?php 
-$uid = $_GET['uid'];
+<?php
+// Sanitize user input to prevent SQL injection
+$uid = isset($_GET['uid']) ? intval($_GET['uid']) : 0;
 $slectdataexam = "SELECT * FROM `register` WHERE `id`='$uid'";
 $querydataexam = mysqli_query($link,$slectdataexam);
 $showdataexam = mysqli_fetch_assoc($querydataexam);
+
+if(!$showdataexam) {
+    echo "<script>alert('Invalid User..!!');window.location.href='user-list.php'</script>";
+    exit;
+}
 ?>
 
 
@@ -157,22 +171,24 @@ $showdataexam = mysqli_fetch_assoc($querydataexam);
             
                <!-- /.modal -->
                <!-- Modal --> 
-<?php 
+<?php
 if(isset($_POST['updateadmit']))
 {
-$uid = $_POST['uid'];
-$exam_location = $_POST['exam_location'];
-$doe = $_POST['doe'];
-$exam_time = $_POST['exam_time'];
-$exam_venue = $_POST['exam_venue'];
-$updatexam = "UPDATE `register` SET `exam_location`='$exam_location',`doe`='$doe',`exam_time`='$exam_time',`exam_venue`='$exam_venue' WHERE `id`='$uid'";
-if(mysqli_query($link,$updatexam))
-{
-    echo "<script>alert('Admin Card Successfully..!!');window.location.href=''</script>";
-}else
-{
-    echo "<script>alert('Try Again...!!');window.location.href=''</script>";
-}
+    // Sanitize all user inputs to prevent SQL injection
+    $uid = intval($_POST['uid']);
+    $exam_location = mysqli_real_escape_string($link, $_POST['exam_location']);
+    $doe = mysqli_real_escape_string($link, $_POST['doe']);
+    $exam_time = mysqli_real_escape_string($link, $_POST['exam_time']);
+    $exam_venue = mysqli_real_escape_string($link, $_POST['exam_venue']);
+
+    $updatexam = "UPDATE `register` SET `exam_location`='$exam_location',`doe`='$doe',`exam_time`='$exam_time',`exam_venue`='$exam_venue' WHERE `id`='$uid'";
+    if(mysqli_query($link,$updatexam))
+    {
+        echo "<script>alert('Admit Card Updated Successfully..!!');window.location.href=''</script>";
+    }else
+    {
+        echo "<script>alert('Try Again...!!');window.location.href=''</script>";
+    }
 }
 ?>
 

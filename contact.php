@@ -86,7 +86,7 @@ include('include/header.php');
                                 </div>
                                 <div class="mb-2">
                                     <label class="form-label">Phone <span>*</span></label>
-                                    <input type="text" class="form-control"  required>
+                                    <input type="text" class="form-control" name="phone" maxlength="10" pattern="[0-9]{10}" oninput="this.value = this.value.replace(/[^0-9]/g, '');" required>
                                 </div>
                                 <div class="mb-2">
                                     <label  class="form-label">Subject <span>*</span></label>

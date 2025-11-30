@@ -1,0 +1,18 @@
+# Local development configuration (contains database passwords)
+connection.local.php
+
+# IDE and editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+
+# Logs
+*.log
+error_log
+
+# Temporary files
+*.tmp
+*.bak
+

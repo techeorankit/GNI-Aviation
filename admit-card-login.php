@@ -47,18 +47,20 @@ include('include/header.php');
                             </form>
                         </div>
 
-                        <?php 
+                        <?php
                         if(isset($_POST['admitcard']))
                         {
-                            $registration_number = $_POST['registration_number'];
+                            // Sanitize user input to prevent SQL injection
+                            $registration_number = mysqli_real_escape_string($link, $_POST['registration_number']);
 
                             $slectregistration = "SELECT * FROM `register` WHERE `registration_number`='$registration_number' AND `status`='Active'";
                             $queryregistration = mysqli_query($link,$slectregistration);
                             $showregist = mysqli_fetch_assoc($queryregistration);
-                                $newregno = $showregist['registration_number'];
-                                $uid = $showregist['id'];
-                            if($registration_number==$newregno)
+
+                            // Check if user was found before accessing array elements
+                            if($showregist && $registration_number == $showregist['registration_number'])
                             {
+                                $uid = $showregist['id'];
                                 echo "<script>alert('Your Admit Card Successfull Login...!!');window.location.href='admit-card.php?uid=$uid'</script>";
                             }else
                             {

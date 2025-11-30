@@ -18,12 +18,18 @@ include('include/header.php');
  <!-- end breadcrumb section --->
 
 
-<?php 
-$uid = $_GET['uid'];
+<?php
+// Sanitize user input to prevent SQL injection
+$uid = isset($_GET['uid']) ? intval($_GET['uid']) : 0;
 $selctadmitexam = "SELECT * FROM `register` WHERE `id`='$uid'";
 $queryadmitexam = mysqli_query($link,$selctadmitexam);
 $showadmitexam = mysqli_fetch_assoc($queryadmitexam);
 
+// Redirect if no valid user found
+if(!$showadmitexam) {
+    echo "<script>alert('Invalid User..!!');window.location.href='admit-card-login.php'</script>";
+    exit;
+}
 ?>
 
 

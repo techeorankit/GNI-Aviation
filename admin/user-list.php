@@ -67,21 +67,25 @@ include ('connection.php');
 
 
 <?php
-   extract($_POST);
-   if(isset($Active))
+   // Removed extract($_POST) as it's a security risk
+   if(isset($_POST['Active']))
    {
-     $id = $_POST['id'];
-        if(mysqli_query($link,"update register set status='$Active' where id='$id'"))
-         {
-           echo "<script>alert('This Account Deactive... !!');window.location.href=''</script>";
-         }
-   }
-    if(isset($InActive))
-   {
-     $id = $_POST['id'];
-     if(mysqli_query($link,"update register set status='$InActive' where id='$id'"))
+     // Sanitize user input to prevent SQL injection
+     $id = intval($_POST['id']);
+     $status = mysqli_real_escape_string($link, $_POST['Active']);
+     if(mysqli_query($link,"UPDATE register SET status='$status' WHERE id='$id'"))
      {
-      echo "<script>alert('This Account Active... !!');window.location.href=''</script>";
+       echo "<script>alert('This Account Deactivated... !!');window.location.href=''</script>";
+     }
+   }
+   if(isset($_POST['InActive']))
+   {
+     // Sanitize user input to prevent SQL injection
+     $id = intval($_POST['id']);
+     $status = mysqli_real_escape_string($link, $_POST['InActive']);
+     if(mysqli_query($link,"UPDATE register SET status='$status' WHERE id='$id'"))
+     {
+       echo "<script>alert('This Account Activated... !!');window.location.href=''</script>";
      }
    }
    ?>
@@ -175,7 +179,7 @@ include ('connection.php');
                                                 <?php } ?>
                                             </td>
                                             <td><a href="admit-card.php?uid=<?=$showuser['id'];?>"  class="label-success label label-default">Add Exam Sachdule </a></td>
-                                            <td><?= date('d-M-y', strtotime($showcareer['date']))?></td>
+                                            <td><?= date('d-M-y', strtotime($showuser['date']))?></td>
                                         </tr>
                                     <?php } ?>
 

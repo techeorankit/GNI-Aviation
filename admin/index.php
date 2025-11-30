@@ -67,47 +67,41 @@
         </div>
         </div>
 
-<?php 
+<?php
 if(isset($_POST['login']))
 {
-       $admin_email_id=$_POST['username'];	
-       $admin_pass= md5($_POST['password']);
-    
-     $sqllog="SELECT * FROM admin_login where username='$admin_email_id' and admin_password='$admin_pass'";
-      $datalog=mysqli_query($link,$sqllog);
-      $count=mysqli_num_rows($datalog);
-      if($count>0){
-        $reslt=mysqli_fetch_assoc($datalog);
-        session_start();
-        $_SESSION['user_id']=$reslt['id'];
-        $_SESSION['user_name']=$reslt['username'];
-if($_SESSION['user_id']==true){
-    echo "<script>window.location.href='dashboard.php';</script>";
-}
-}else{
+    // Sanitize user input to prevent SQL injection
+    $admin_email_id = mysqli_real_escape_string($link, $_POST['username']);
+    $admin_pass_input = $_POST['password'];
+
+    // First, find user by username only
+    $sqllog = "SELECT * FROM admin_login WHERE username='$admin_email_id'";
+    $datalog = mysqli_query($link, $sqllog);
+
+    if(mysqli_num_rows($datalog) > 0) {
+        $reslt = mysqli_fetch_assoc($datalog);
+        $stored_password = $reslt['admin_password'];
+
+        // Support both: new password_hash format and legacy MD5 format
+        $password_valid = false;
+        if(password_verify($admin_pass_input, $stored_password)) {
+            $password_valid = true;
+        } elseif(md5($admin_pass_input) === $stored_password) {
+            // Legacy MD5 support - consider upgrading password in database
+            $password_valid = true;
+        }
+
+        if($password_valid) {
+            session_start();
+            $_SESSION['user_id'] = $reslt['id'];
+            $_SESSION['user_name'] = $reslt['username'];
+            echo "<script>window.location.href='dashboard.php';</script>";
+        } else {
+            echo "<script>alert('Please enter a valid email & Password!');window.location.href='';</script>";
+        }
+    } else {
         echo "<script>alert('Please enter a valid email & Password!');window.location.href='';</script>";
-      }
-//  
-   
-//       if($username==$admin_arr['username'] || $admin_password==$reslt['admin_pass'])
-//       {
-//         $_SESSION['user_id']=$reslt['id'];
-//         $_SESSION['user_name']=$reslt['username'];
-      
-//       }
-//       else
-//       {
-//         $admin_data = mysqli_query($link,"SELECT * FROM admin_login WHERE id=1");
-//         $admin_arr = mysqli_fetch_assoc($admin_data);
-//         if(!($admin_password==$admin_arr['admin_password']))
-//         {
-//          echo  "<h4 style='color:red;text-transform: inherit; font-size:13px;'>Invalid Your Password Input Correct Password...<h4>";
-//         }
-//         if(!($username==$admin_arr['username']))
-//         {
-//           echo  "<h4 style='color:red;text-transform: inherit; font-size:13px;'>Invalid Your Username  Input Correct username...<h4>";
-//         }
-//       }
+    }
 }
 ?>
 

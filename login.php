@@ -64,25 +64,35 @@ include('include/header.php');
                             </form>
                         </div>
 
-                        <?php 
+                        <?php
 if(isset($_POST['loginsss']))
 {
-    $email  = $_POST['email'];
-    $dob    = $_POST['dob'];
-    $apply  = $_POST['apply'];
-    $password = $_POST['password'];
+    // Sanitize user inputs to prevent SQL injection
+    $email  = mysqli_real_escape_string($link, $_POST['email']);
+    $dob    = mysqli_real_escape_string($link, $_POST['dob']);
+    $apply  = mysqli_real_escape_string($link, $_POST['apply']);
+    $password = $_POST['password']; // Keep original for password_verify
 
-    // OR + AND correct grouping
-    $query = "SELECT * FROM `register` WHERE (`registration_number`='$email' OR `email`='$email' OR `phone`='$email') AND `dob`='$dob' AND `apply_for`='$apply' AND `password`='$password'
-    AND `status`='Active'";
+    // First, find the user by email/phone/registration number, dob, and apply_for
+    $query = "SELECT * FROM `register` WHERE (`registration_number`='$email' OR `email`='$email' OR `phone`='$email') AND `dob`='$dob' AND `apply_for`='$apply' AND `status`='Active'";
     $result = mysqli_query($link, $query);
+
     if(mysqli_num_rows($result) > 0)
     {
-        echo "<script>alert('Login Successfully..!!');window.location.href='index.php'</script>";
+        $user = mysqli_fetch_assoc($result);
+        // Check password - support both hashed and legacy plain text passwords
+        if(password_verify($password, $user['password']) || $password === $user['password'])
+        {
+            echo "<script>alert('Login Successfully..!!');window.location.href='index.php'</script>";
+        }
+        else
+        {
+            echo "<script>alert('Invalid Details..!!');window.location.href='login.php'</script>";
+        }
     }
     else
     {
-        echo "<script>alert('Invalid Details..!!');window.location.href='index.php'</script>";
+        echo "<script>alert('Invalid Details..!!');window.location.href='login.php'</script>";
     }
 }
 ?>

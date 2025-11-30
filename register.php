@@ -79,10 +79,11 @@ if(isset($_POST['registration']))
     $dob_safe = mysqli_real_escape_string($link, $dob);
     $language_safe = mysqli_real_escape_string($link, $language);
     $applyfor_safe = mysqli_real_escape_string($link, $applyfor);
-    $password_safe = mysqli_real_escape_string($link, $password);
+    // Hash password securely using password_hash
+    $password_hashed = password_hash($password, PASSWORD_DEFAULT);
     $reg_no_safe = mysqli_real_escape_string($link, $reg_no);
 
-    $insrtreg = "INSERT INTO `register`(`registration_number`, `first_name`, `last_name`, `email`, `phone`, `dob`, `language`, `apply_for`, `status`, `password`) VALUES ('$reg_no_safe','$fname_safe','$lname_safe','$email_safe','$phone_safe','$dob_safe','$language_safe','$applyfor_safe','$status','$password_safe')";
+    $insrtreg = "INSERT INTO `register`(`registration_number`, `first_name`, `last_name`, `email`, `phone`, `dob`, `language`, `apply_for`, `status`, `password`) VALUES ('$reg_no_safe','$fname_safe','$lname_safe','$email_safe','$phone_safe','$dob_safe','$language_safe','$applyfor_safe','$status','$password_hashed')";
     if(mysqli_query($link,$insrtreg))
     {
       $registration_success = true;
