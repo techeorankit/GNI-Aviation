@@ -55,7 +55,7 @@ include('include/header.php');
         
       </div>
        <div class="advertisements-btn-wrapper text-center">
-            <a href="pdf/englishf.pdf" class="enlhhs" target="_blank"><span class="icon-view"></span><i class="fa fa-eye" aria-hidden="true"></i> English</a>
+            <a href="pdf/english.pdf" class="enlhhs" target="_blank"><span class="icon-view"></span><i class="fa fa-eye" aria-hidden="true"></i> English</a>
             <a href="pdf/hindi.pdf" class="enlhhs" target="_blank"><span class="icon-view"></span><i class="fa fa-eye" aria-hidden="true"></i> Hindi</a>
          </div>
       <div class="link-item margsssd bgc-lightblu">

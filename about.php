@@ -25,7 +25,7 @@ include('include/header.php');
                
           <div class="row">
             <div class="col-lg-12 contsctabut">
-              <h3>About GNI Aviation</h1>
+              <h3>About GNI Aviation</h3>
             </div>
             <div class="col-lg-8 avitsss">
               <p>Greater Noida International Aviation Services Private Limited, founded in 2025, has emerged as a prominent organization in the domain of aviation training and manpower solutions in India. Over the course of a decade, the company has demonstrated sustained excellence by delivering sophisticated, industry-compliant training programs and end-to-end manpower services tailored to the advanced operational requirements of the aviation and airport services sector.</p>

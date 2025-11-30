@@ -21,7 +21,7 @@ include('include/header.php');
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center fontsssd1">
-                <h3>GNI Aviation Photo Gallery</h1>
+                <h3>GNI Aviation Photo Gallery</h3>
                 <p>Welcome to our photo gallery section - Explore our training sessions, events, and success stories</p>
             </div>
         </div>
