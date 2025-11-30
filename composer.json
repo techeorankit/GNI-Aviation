@@ -1,0 +1,14 @@
+{
+    "name": "gni/aviation",
+    "description": "GNI Aviation Website",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Rajneesh Kumar",
+            "email": "kumarrajnees@gmail.com"
+        }
+    ],
+    "require": {
+        "giggsey/libphonenumber-for-php": "^9.0"
+    }
+}

@@ -1,5 +1,6 @@
 <?php
 include('include/header.php');
+include('include/phone-validator.php');
 
 // Handle registration
 $registration_success = false;
@@ -48,10 +49,11 @@ if(isset($_POST['registration']))
       $errors['email'] = 'This email is already registered.';
     }
   }
-  if(empty($phone)) {
-    $errors['phone'] = 'Mobile Number is required.';
-  } elseif(!preg_match('/^[0-9]{10}$/', $phone)) {
-    $errors['phone'] = 'Please enter a valid 10-digit mobile number.';
+
+  // Validate Indian phone number using libphonenumber
+  $phoneValidation = validateIndianPhone($phone, true); // true = mobile only
+  if(!$phoneValidation['valid']) {
+    $errors['phone'] = $phoneValidation['error'];
   }
   if(empty($dob)) {
     $errors['dob'] = 'Date of Birth is required.';
@@ -199,7 +201,8 @@ if(isset($_POST['registration']))
                                 </div>
                                 <div class="mb-2 col-lg-12">
                                     <label class="form-label">Mobile Number (Whatsapp Number Only) <span>*</span></label>
-                                    <input type="text" class="form-control <?= isset($errors['phone']) ? 'is-invalid' : ''; ?>" name="phone" maxlength="10" pattern="[0-9]{10}" oninput="this.value = this.value.replace(/[^0-9]/g, '');" required value="<?= htmlspecialchars($old_values['phone'] ?? ''); ?>">
+                                    <input type="tel" class="form-control <?= isset($errors['phone']) ? 'is-invalid' : ''; ?>" name="phone" maxlength="15" pattern="[0-9+\-\s]{10,15}" oninput="this.value = this.value.replace(/[^0-9+\-\s]/g, '');" placeholder="e.g., 9876543210" required value="<?= htmlspecialchars($old_values['phone'] ?? ''); ?>">
+                                    <small class="text-muted">Enter 10-digit Indian mobile number (starting with 6, 7, 8, or 9)</small>
                                     <?php if(isset($errors['phone'])): ?>
                                     <div class="invalid-feedback"><?= htmlspecialchars($errors['phone']); ?></div>
                                     <?php endif; ?>
