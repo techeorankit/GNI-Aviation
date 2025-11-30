@@ -1,5 +1,13 @@
-<?php 
+<?php
+session_start();
 include ('connection.php');
+
+// Check if user is logged in
+$userid = $_SESSION['user_id'] ?? 0;
+if($userid == 0) {
+    echo "<script>window.location.href='index.php'</script>";
+    exit;
+}
 ?>
 
 <!DOCTYPE html>
@@ -124,27 +132,27 @@ mysqli_set_charset($link, "utf8mb4");
                                     ?>
                                  <tr>
                                     <td><?= $sn;?></td>
-                                    <td><?= $shownotifications['notification_cont'];?></td>
-                                   
+                                    <td><?= htmlspecialchars($shownotifications['notification_cont']);?></td>
+
                                     <td><?= date("d-m-Y", strtotime($shownotifications['date'])); ?> </td>
                                     <td>
-                                          <button type="button" class="btn btn-add btn-xs" data-toggle="modal" data-target="#update<?= $shownotifications['id'];?>"><i class="fa fa-pencil"></i></button>
+                                          <button type="button" class="btn btn-add btn-xs" data-toggle="modal" data-target="#update<?= intval($shownotifications['id']);?>"><i class="fa fa-pencil"></i></button>
 
 
 
 <!-- start update section --->
-<div class="modal fade" id="update<?= $shownotifications['id'];?>" tabindex="-1" role="dialog" aria-hidden="true">
+<div class="modal fade" id="update<?= intval($shownotifications['id']);?>" tabindex="-1" role="dialog" aria-hidden="true">
                   <div class="modal-dialog">
                      <div class="modal-content">
 
-                      <?php 
-                      $hlid = $shownotifications['id'];
+                      <?php
+                      $hlid = intval($shownotifications['id']);
                       $slectunoticfit = "SELECT * FROM `notification` WHERE `id`='$hlid'";
                       $queryunotifit= mysqli_query($link,$slectunoticfit);
                       $shownotific = mysqli_fetch_assoc($queryunotifit);
                       ?>
 
-                     
+
 
 
 
@@ -156,15 +164,15 @@ mysqli_set_charset($link, "utf8mb4");
                         <div class="modal-body">
                            <div class="row">
                               <div class="col-md-12">
-                              <form class="form-horizontal" method="POST" enctype="multipart/form-data"> 
+                              <form class="form-horizontal" method="POST" enctype="multipart/form-data">
                                     <fieldset>
                                        <!-- Text input-->
-                                     
+
                                        <div class="col-md-12 form-group">
-                                          
+
                                           <label class="control-label">Notification</label>
-                                          <input type="text" name="noticefication_cont"  value="<?= $shownotific['notification_cont'];?>" class="form-control">
-                                          <input type="hidden"  name="nuid"  value="<?= $shownotific['id'];?>" class="form-control">
+                                          <input type="text" name="noticefication_cont"  value="<?= htmlspecialchars($shownotific['notification_cont']);?>" class="form-control">
+                                          <input type="hidden"  name="nuid"  value="<?= intval($shownotific['id']);?>" class="form-control">
                                        </div>
 
                                   
@@ -198,7 +206,7 @@ mysqli_set_charset($link, "utf8mb4");
 
 
 
- <a href="delete-notification.php?del=<?=$shownotifications['id'];?>" class="btn btn-danger btn-xs" ><i class="fa fa-trash-o"></i> </a>
+ <a href="delete-notification.php?del=<?= intval($shownotifications['id']);?>" class="btn btn-danger btn-xs" ><i class="fa fa-trash-o"></i> </a>
                                          
                                        </td>
                                     </tr>

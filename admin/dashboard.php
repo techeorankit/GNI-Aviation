@@ -1,10 +1,13 @@
-<?php 
+<?php
 session_start();
-$userid = $_SESSION['user_id'];
-if($userid==0)
-{
-echo "<script>window.location.href='index.php'</script>";
-}else{
+
+// Check if user is logged in
+$userid = $_SESSION['user_id'] ?? 0;
+if($userid == 0) {
+    echo "<script>window.location.href='index.php'</script>";
+    exit;
+}
+// User is authenticated, proceed with the page
 
 
 ?>
@@ -122,8 +125,6 @@ echo "<script>window.location.href='index.php'</script>";
             </section>
             <!-- /.content -->
          </div>
-      <?php 
+      <?php
       include ('include/footer.php');
       ?>
-
-<?php } ?>

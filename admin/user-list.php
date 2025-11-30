@@ -1,5 +1,13 @@
-<?php 
+<?php
+session_start();
 include ('connection.php');
+
+// Check if user is logged in
+$userid = $_SESSION['user_id'] ?? 0;
+if($userid == 0) {
+    echo "<script>window.location.href='index.php'</script>";
+    exit;
+}
 ?>
 
 <!DOCTYPE html>
@@ -156,29 +164,29 @@ include ('connection.php');
                                  ?>
                                  <tr>
                                        <td><?= $sn;?></td>
-                                       <td><?=$showuser['registration_number'];?></td>
-                                        <td><?=$showuser['first_name'];?></td>
-                                        <td><?=$showuser['last_name'];?></td>
-                                        <td><?=$showuser['email'];?></td>
-                                        <td><?=$showuser['phone'];?></td>
+                                       <td><?= htmlspecialchars($showuser['registration_number']);?></td>
+                                        <td><?= htmlspecialchars($showuser['first_name']);?></td>
+                                        <td><?= htmlspecialchars($showuser['last_name']);?></td>
+                                        <td><?= htmlspecialchars($showuser['email']);?></td>
+                                        <td><?= htmlspecialchars($showuser['phone']);?></td>
                                         <td><?= date("d F, Y", strtotime($showuser['dob'])); ?></td>
-                                        <td><?=$showuser['language'];?></td>
-                                        <td><?=$showuser['apply_for'];?></td>
-                                        <td><?=$showuser['password'];?></td>
+                                        <td><?= htmlspecialchars($showuser['language']);?></td>
+                                        <td><?= htmlspecialchars($showuser['apply_for']);?></td>
+                                        <td>********</td>
                                         <td>
                                             <?php if($showuser['status']=="Active"){ ?>
                                                 <form method="POST">
-                                                    <input type="hidden" name="id" value="<?=$showuser['id'];?>">
+                                                    <input type="hidden" name="id" value="<?= intval($showuser['id']);?>">
                                                     <button type="submit" value="InActive" name="Active" class="label-custom label label-default">Active</button>
                                                 </form>
                                                 <?php } else { ?>
                                                     <form method="POST">
-                                                        <input type="hidden" name="id" value="<?=$showuser['id'];?>">
+                                                        <input type="hidden" name="id" value="<?= intval($showuser['id']);?>">
                                                         <button type="submit" value="Active" name="InActive" class="label-danger label label-default">DeActive</button>
                                                     </form>
                                                 <?php } ?>
                                             </td>
-                                            <td><a href="admit-card.php?uid=<?=$showuser['id'];?>"  class="label-success label label-default">Add Exam Sachdule </a></td>
+                                            <td><a href="admit-card.php?uid=<?= intval($showuser['id']);?>"  class="label-success label label-default">Add Exam Schedule </a></td>
                                             <td><?= date('d-M-y', strtotime($showuser['date']))?></td>
                                         </tr>
                                     <?php } ?>

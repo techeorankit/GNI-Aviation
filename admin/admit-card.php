@@ -131,24 +131,24 @@ if(!$showdataexam) {
                                      
                                        <div class="col-md-12 form-group">
                                           <label class="control-label">EXAM LOCATION</label>
-                                          <input type="text" name="exam_location" value="<?= $showdataexam['exam_location'];?>"  placeholder="Enter Exam Location" class="form-control">
-                                          <input type="hidden" name="uid" value="<?= $uid;?>">
+                                          <input type="text" name="exam_location" value="<?= htmlspecialchars($showdataexam['exam_location']);?>"  placeholder="Enter Exam Location" class="form-control">
+                                          <input type="hidden" name="uid" value="<?= intval($uid);?>">
                                        </div>
 
                                        <div class="col-md-12 form-group">
                                           <label class="control-label">DATE OF EXAM</label>
-                                          <input type="date" name="doe" value="<?= $showdataexam['doe'];?>" placeholder="Enter Date Of Exam" class="form-control">
+                                          <input type="date" name="doe" value="<?= htmlspecialchars($showdataexam['doe']);?>" placeholder="Enter Date Of Exam" class="form-control">
                                        </div>
 
                                         <div class="col-md-12 form-group">
                                           <label class="control-label">EXAM TIMING</label>
-                                          <input type="time" name="exam_time" value="<?= $showdataexam['exam_time'];?>"  placeholder="Enter Exam Timing" class="form-control">
+                                          <input type="time" name="exam_time" value="<?= htmlspecialchars($showdataexam['exam_time']);?>"  placeholder="Enter Exam Timing" class="form-control">
                                        </div>
 
 
                                         <div class="col-md-12 form-group">
                                           <label class="control-label">EXAM Venue</label>
-                                          <input type="text" name="exam_venue" value="<?= $showdataexam['exam_venue'];?>" placeholder="Enter Exam Venue" class="form-control">
+                                          <input type="text" name="exam_venue" value="<?= htmlspecialchars($showdataexam['exam_venue']);?>" placeholder="Enter Exam Venue" class="form-control">
                                        </div>
                                       
                                        <!-- Text input-->

@@ -88,13 +88,13 @@ include('include/header.php');
                       <div class="microsoft">
                         <div class="marquee">
                             
-                           <?php 
+                           <?php
 $slectnotification = "SELECT * FROM `notification`";
 $querynotification = mysqli_query($link, $slectnotification);
 
 if ($querynotification && mysqli_num_rows($querynotification) > 0) {
     while ($shownotification = mysqli_fetch_assoc($querynotification)) {
-        echo "<p>" . $shownotification['notification_cont'] . "</p>";
+        echo "<p>" . htmlspecialchars($shownotification['notification_cont']) . "</p>";
     }
 } else {
     echo "<p>No notifications found.</p>";

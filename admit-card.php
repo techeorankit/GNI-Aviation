@@ -66,11 +66,11 @@ if(!$showadmitexam) {
                              <tbody>
                               <tr>
                                 <td><b>ROLL NO.</b></td>
-                                <td><b><?= $showadmitexam['registration_number'];?></b> </td>
+                                <td><b><?= htmlspecialchars($showadmitexam['registration_number']);?></b> </td>
                               </tr>
                               <tr>
                                 <td><b>CANDIDATE’S NAME</b></td>
-                                <td><b><?= $showadmitexam['first_name'];?> <?= $showadmitexam['last_name'];?></b> </td>
+                                <td><b><?= htmlspecialchars($showadmitexam['first_name']);?> <?= htmlspecialchars($showadmitexam['last_name']);?></b> </td>
                               </tr>
                             
                               <tr>
@@ -79,7 +79,7 @@ if(!$showadmitexam) {
                               </tr>
                               <tr>
                                 <td><b>EXAM LOCATION</b></td>
-                                <td><b><?= $showadmitexam['exam_location'];?></b> </td>
+                                <td><b><?= htmlspecialchars($showadmitexam['exam_location']);?></b> </td>
                               </tr>
                               <tr>
                                 <td><b>DATE OF EXAM</b></td>
@@ -95,7 +95,7 @@ if(!$showadmitexam) {
                               </tr> -->
                              
                               <tr>
-                                <td colspan="2" style="    height: 125px;"><b>EXAM VENUE: </b><?= $showadmitexam['exam_venue'];?></td>
+                                <td colspan="2" style="    height: 125px;"><b>EXAM VENUE: </b><?= htmlspecialchars($showadmitexam['exam_venue']);?></td>
                               </tr>
                              </tbody>
                            </table>
