@@ -16,7 +16,5 @@ error_log
 *.tmp
 *.bak
 
-# Composer
-/vendor/
-composer.phar
-
+.env
+.env.example

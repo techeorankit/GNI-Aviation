@@ -1,0 +1,56 @@
+<?php return array(
+    'root' => array(
+        'name' => 'gni/aviation',
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
+        'reference' => '177ecc6862dd0992eca6d2449c93ccdc2a2e1fb4',
+        'type' => 'project',
+        'install_path' => __DIR__ . '/../../',
+        'aliases' => array(),
+        'dev' => true,
+    ),
+    'versions' => array(
+        'giggsey/libphonenumber-for-php' => array(
+            'pretty_version' => '9.0.19',
+            'version' => '9.0.19.0',
+            'reference' => '85401d194a87bc9de1d962252569879e575bc34f',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../giggsey/libphonenumber-for-php',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'giggsey/libphonenumber-for-php-lite' => array(
+            'dev_requirement' => false,
+            'replaced' => array(
+                0 => '9.0.19',
+            ),
+        ),
+        'giggsey/locale' => array(
+            'pretty_version' => '2.8.0',
+            'version' => '2.8.0.0',
+            'reference' => '1cd8b3ad2d43e04f4c2c6a240495af44780f809b',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../giggsey/locale',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'gni/aviation' => array(
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => '177ecc6862dd0992eca6d2449c93ccdc2a2e1fb4',
+            'type' => 'project',
+            'install_path' => __DIR__ . '/../../',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'symfony/polyfill-mbstring' => array(
+            'pretty_version' => 'v1.33.0',
+            'version' => '1.33.0.0',
+            'reference' => '6d857f4d76bd4b343eac26d6b539585d2bc56493',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../symfony/polyfill-mbstring',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+    ),
+);
