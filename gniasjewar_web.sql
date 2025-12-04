@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 4.9.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Nov 19, 2025 at 12:52 PM
--- Server version: 10.4.32-MariaDB
--- PHP Version: 8.0.30
+-- Host: localhost:3306
+-- Generation Time: Dec 04, 2025 at 11:05 AM
+-- Server version: 5.7.34
+-- PHP Version: 5.6.40
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -18,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `gni_aviation`
+-- Database: `gniasjewar_web`
 --
 
 -- --------------------------------------------------------
@@ -31,7 +32,7 @@ CREATE TABLE `admin_login` (
   `id` int(11) NOT NULL,
   `username` varchar(250) NOT NULL,
   `admin_password` varchar(250) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `admin_login`
@@ -44,14 +45,38 @@ INSERT INTO `admin_login` (`id`, `username`, `admin_password`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `notification`
+--
+
+CREATE TABLE `notification` (
+  `id` int(11) NOT NULL,
+  `notification_cont` text,
+  `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `notification`
+--
+
+INSERT INTO `notification` (`id`, `notification_cont`, `date`) VALUES
+(3, '<strong>Jewar International Airport Phase-1 Construction Update </strong> – Work progressing at rapid speed. Latest reports available now.', '2025-11-26 11:19:01'),
+(4, '<strong>Land Acquisition Notice (Jewar Area) </strong> – New guidelines released. Farmers are advised to review updated compensation details.', '2025-11-26 11:19:25'),
+(5, '<strong>Traffic Advisory  </strong> – Diversion near Jewar–Bulandshahr Road due to ongoing development work.', '2025-11-26 11:19:33'),
+(6, '<strong>Industrial Plot Allocation </strong> – YEIDA announces new industrial plot scheme for Jewar region.', '2025-11-26 11:19:43'),
+(7, '<strong>Public Hearing Announcement </strong> – Environmental clearance meeting scheduled next week.', '2025-11-26 11:19:50'),
+(8, '<strong>Metro Expansion Update</strong> – Proposed Noida–Jewar Metro route approved for DPR review.', '2025-11-26 11:20:01');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `register`
 --
 
 CREATE TABLE `register` (
   `id` int(11) NOT NULL,
   `registration_number` varchar(250) DEFAULT NULL,
-  `first_name` varchar(250) DEFAULT NULL,
-  `last_name` varchar(250) DEFAULT NULL,
+  `username` varchar(250) DEFAULT NULL,
+  `father_name` varchar(250) DEFAULT NULL,
   `email` varchar(250) DEFAULT NULL,
   `phone` varchar(250) DEFAULT NULL,
   `dob` date DEFAULT NULL,
@@ -63,15 +88,8 @@ CREATE TABLE `register` (
   `doe` date DEFAULT NULL,
   `exam_time` time DEFAULT NULL,
   `exam_venue` varchar(250) DEFAULT NULL,
-  `date` timestamp NOT NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `register`
---
-
-INSERT INTO `register` (`id`, `registration_number`, `first_name`, `last_name`, `email`, `phone`, `dob`, `language`, `apply_for`, `status`, `password`, `exam_location`, `doe`, `exam_time`, `exam_venue`, `date`) VALUES
-(1, '990710', 'Ravinder', 'Gupta', 'ravinderg631@gmail.com', '9315585244', '1999-03-21', 'English', 'CSA Application', 'Active', 'admin', 'test', '2025-11-22', '14:00:00', 'testdfdff dfdfdf ', '2025-11-14 09:42:22');
+  `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Indexes for dumped tables
@@ -81,6 +99,12 @@ INSERT INTO `register` (`id`, `registration_number`, `first_name`, `last_name`, 
 -- Indexes for table `admin_login`
 --
 ALTER TABLE `admin_login`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `notification`
+--
+ALTER TABLE `notification`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -100,10 +124,16 @@ ALTER TABLE `admin_login`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
+-- AUTO_INCREMENT for table `notification`
+--
+ALTER TABLE `notification`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
 -- AUTO_INCREMENT for table `register`
 --
 ALTER TABLE `register`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

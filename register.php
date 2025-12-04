@@ -9,10 +9,10 @@ $old_values = [];
 
 if(isset($_POST['registration']))
 {
-  $fname = trim($_POST['fname'] ?? '');
+  $username = trim($_POST['username'] ?? '');
   $reg_no = $_POST['reg_no'] ?? '';
   $status = $_POST['status'] ?? 'InActive';
-  $lname = trim($_POST['lname'] ?? '');
+  $father_name = trim($_POST['father_name'] ?? '');
   $email = trim($_POST['email'] ?? '');
   $phone = trim($_POST['phone'] ?? '');
   $dob = $_POST['dob'] ?? '';
@@ -22,8 +22,8 @@ if(isset($_POST['registration']))
 
   // Store old values for form repopulation
   $old_values = [
-    'fname' => $fname,
-    'lname' => $lname,
+    'username' => $username,
+    'father_name' => $father_name,
     'email' => $email,
     'phone' => $phone,
     'dob' => $dob,
@@ -32,11 +32,11 @@ if(isset($_POST['registration']))
   ];
 
   // Validation
-  if(empty($fname)) {
-    $errors['fname'] = 'First Name is required.';
+  if(empty($username)) {
+    $errors['username'] = 'Name is required.';
   }
-  if(empty($lname)) {
-    $errors['lname'] = 'Last Name is required.';
+  if(empty($father_name)) {
+    $errors['father_name'] = 'Father Name is required.';
   }
   if(empty($email)) {
     $errors['email'] = 'Email Address is required.';
@@ -74,8 +74,8 @@ if(isset($_POST['registration']))
 
   // If no errors, proceed with registration
   if(empty($errors)) {
-    $fname_safe = mysqli_real_escape_string($link, $fname);
-    $lname_safe = mysqli_real_escape_string($link, $lname);
+    $username_safe = mysqli_real_escape_string($link, $username);
+    $father_name_safe = mysqli_real_escape_string($link, $father_name);
     $email_safe = mysqli_real_escape_string($link, $email);
     $phone_safe = mysqli_real_escape_string($link, $phone);
     $dob_safe = mysqli_real_escape_string($link, $dob);
@@ -85,11 +85,11 @@ if(isset($_POST['registration']))
     $password_hashed = password_hash($password, PASSWORD_DEFAULT);
     $reg_no_safe = mysqli_real_escape_string($link, $reg_no);
 
-    $insrtreg = "INSERT INTO `register`(`registration_number`, `first_name`, `last_name`, `email`, `phone`, `dob`, `language`, `apply_for`, `status`, `password`) VALUES ('$reg_no_safe','$fname_safe','$lname_safe','$email_safe','$phone_safe','$dob_safe','$language_safe','$applyfor_safe','$status','$password_hashed')";
+    $insrtreg = "INSERT INTO `register`(`registration_number`, `username`, `father_name`, `email`, `phone`, `dob`, `language`, `apply_for`, `status`, `password`) VALUES ('$reg_no_safe','$username_safe','$father_name_safe','$email_safe','$phone_safe','$dob_safe','$language_safe','$applyfor_safe','$status','$password_hashed')";
     if(mysqli_query($link,$insrtreg))
     {
       $registration_success = true;
-      $registered_name = $fname . ' ' . $lname;
+      $registered_name = $username;
       $registered_email = $email;
     }else{
       $errors['general'] = 'Registration failed. Please try again. Error: ' . mysqli_error($link);
@@ -159,19 +159,19 @@ if(isset($_POST['registration']))
 
                             <form method="POST" class="row" id="registrationForm">
                                 <div class="mb-3 mt-2 col-lg-12">
-                                    <label class="form-label">First Name<span>*</span></label>
-                                    <input type="text" class="form-control <?= isset($errors['fname']) ? 'is-invalid' : ''; ?>" required name="fname" value="<?= htmlspecialchars($old_values['fname'] ?? ''); ?>">
-                                    <?php if(isset($errors['fname'])): ?>
-                                    <div class="invalid-feedback"><?= htmlspecialchars($errors['fname']); ?></div>
+                                    <label class="form-label">Name<span>*</span></label>
+                                    <input type="text" class="form-control <?= isset($errors['username']) ? 'is-invalid' : ''; ?>" required name="username" value="<?= htmlspecialchars($old_values['username'] ?? ''); ?>">
+                                    <?php if(isset($errors['username'])): ?>
+                                    <div class="invalid-feedback"><?= htmlspecialchars($errors['username']); ?></div>
                                     <?php endif; ?>
                                     <input type="hidden" name="reg_no" value="GNI<?= $random10;?>">
                                     <input type="hidden" name="status" value="InActive">
                                 </div>
                                 <div class="mb-3 mt-2 col-lg-12">
-                                    <label class="form-label">Last Name<span>*</span></label>
-                                    <input type="text" class="form-control <?= isset($errors['lname']) ? 'is-invalid' : ''; ?>" required name="lname" value="<?= htmlspecialchars($old_values['lname'] ?? ''); ?>">
-                                    <?php if(isset($errors['lname'])): ?>
-                                    <div class="invalid-feedback"><?= htmlspecialchars($errors['lname']); ?></div>
+                                    <label class="form-label">Father Name<span>*</span></label>
+                                    <input type="text" class="form-control <?= isset($errors['father_name']) ? 'is-invalid' : ''; ?>" required name="father_name" value="<?= htmlspecialchars($old_values['father_name'] ?? ''); ?>">
+                                    <?php if(isset($errors['father_name'])): ?>
+                                    <div class="invalid-feedback"><?= htmlspecialchars($errors['father_name']); ?></div>
                                     <?php endif; ?>
                                 </div>
                                 <div class="mb-2 col-lg-12">
