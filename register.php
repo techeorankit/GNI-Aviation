@@ -58,7 +58,7 @@ if(isset($_POST['registration']))
   if(empty($dob)) {
     $errors['dob'] = 'Date of Birth is required.';
   } elseif(!preg_match('/^\d{4}-\d{2}-\d{2}$/', $dob)) {
-    $errors['dob'] = 'Please enter a valid date format (YYYY-MM-DD).';
+    $errors['dob'] = 'Please enter a valid date format (DD/MM/YYYY).';
   }
   if(empty($language) || $language == '---Select---') {
     $errors['language'] = 'Please select a preferred language.';
@@ -141,25 +141,7 @@ if(isset($_POST['registration']))
                     </div>
 
                     <?php else: ?>
-                    <!-- Toast Notification -->
-                    <?php if(!empty($errors)): ?>
-                    <div class="toast-container position-fixed top-0 end-0 p-3" style="z-index: 9999;">
-                        <div id="errorToast" class="toast show" role="alert" aria-live="assertive" aria-atomic="true">
-                            <div class="toast-header bg-danger text-white">
-                                <i class="fa fa-exclamation-circle me-2"></i>
-                                <strong class="me-auto">Registration Error</strong>
-                                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast" aria-label="Close"></button>
-                            </div>
-                            <div class="toast-body">
-                                <ul class="mb-0 ps-3">
-                                    <?php foreach($errors as $error): ?>
-                                    <li><?= htmlspecialchars($error); ?></li>
-                                    <?php endforeach; ?>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <?php endif; ?>
+
 
                     <!-- Registration Form -->
                     <div class="row">
@@ -202,7 +184,7 @@ if(isset($_POST['registration']))
                                 <div class="mb-2 col-lg-12">
                                     <label class="form-label">Mobile Number (Whatsapp Number Only) <span>*</span></label>
                                     <input type="tel" class="form-control <?= isset($errors['phone']) ? 'is-invalid' : ''; ?>" name="phone" maxlength="15" pattern="[0-9+\-\s]{10,15}" oninput="this.value = this.value.replace(/[^0-9+\-\s]/g, '');" placeholder="e.g., 9876543210" required value="<?= htmlspecialchars($old_values['phone'] ?? ''); ?>">
-                                    <small class="text-muted">Enter 10-digit Indian mobile number (starting with 6, 7, 8, or 9)</small>
+                                    <small class="text-muted">Enter 10-digit mobile number</small>
                                     <?php if(isset($errors['phone'])): ?>
                                     <div class="invalid-feedback"><?= htmlspecialchars($errors['phone']); ?></div>
                                     <?php endif; ?>
@@ -295,16 +277,7 @@ function togglePassword() {
     }
 }
 
-// Auto-dismiss toast after 5 seconds
-document.addEventListener('DOMContentLoaded', function() {
-    var toastEl = document.getElementById('errorToast');
-    if(toastEl) {
-        setTimeout(function() {
-            toastEl.classList.remove('show');
-            toastEl.classList.add('hide');
-        }, 5000);
-    }
-});
+
 </script>
 
 <?php

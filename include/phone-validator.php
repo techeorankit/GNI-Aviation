@@ -53,13 +53,13 @@ function validateIndianPhone($phoneNumber, $mobileOnly = true) {
 
     // Basic check for 10 digits
     if (!preg_match('/^[0-9]{10}$/', $phoneNumber)) {
-        $result['error'] = 'Please enter a valid 10-digit Indian mobile number.';
+        $result['error'] = 'Please enter a valid 10-digit mobile number.';
         return $result;
     }
     
     // Check if starts with valid Indian mobile prefixes (6, 7, 8, 9)
     if ($mobileOnly && !preg_match('/^[6-9]/', $phoneNumber)) {
-        $result['error'] = 'Indian mobile numbers must start with 6, 7, 8, or 9.';
+        $result['error'] = 'Invalid mobile number. Kindly enter a valid one.';
         return $result;
     }
     
@@ -71,7 +71,7 @@ function validateIndianPhone($phoneNumber, $mobileOnly = true) {
         
         // Check if the number is valid for India
         if (!$phoneUtil->isValidNumberForRegion($numberProto, 'IN')) {
-            $result['error'] = 'This is not a valid Indian phone number.';
+            $result['error'] = 'This is not a valid phone number.';
             return $result;
         }
         
@@ -98,7 +98,7 @@ function validateIndianPhone($phoneNumber, $mobileOnly = true) {
 
         // If mobile only is required, check the type
         if ($mobileOnly && $numberType !== PhoneNumberType::MOBILE && $numberType !== PhoneNumberType::FIXED_LINE_OR_MOBILE) {
-            $result['error'] = 'Please enter a valid Indian mobile number, not a ' . strtolower($result['type']) . ' number.';
+            $result['error'] = 'Please enter a valid mobile number, not a ' . strtolower($result['type']) . ' number.';
             return $result;
         }
         
@@ -107,7 +107,7 @@ function validateIndianPhone($phoneNumber, $mobileOnly = true) {
         $result['valid'] = true;
         
     } catch (NumberParseException $e) {
-        $result['error'] = 'Invalid phone number format. Please enter a valid Indian mobile number.';
+        $result['error'] = 'Invalid phone number format. Please enter a valid mobile number.';
     } catch (Exception $e) {
         $result['error'] = 'Error validating phone number. Please try again.';
     }

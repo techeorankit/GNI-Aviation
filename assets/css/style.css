@@ -450,13 +450,13 @@ p {
 
 .bgcclrlogin {
     margin: 0 !important;
-    padding: 0 20px !important;
+    padding: 0 10px !important;
 }
 
 
 .bgcreg {
     margin: 0 !important;
-    padding: 0 20px !important;
+    padding: 0 10px !important;
 }
 
 /* end login section */
@@ -2787,6 +2787,8 @@ body.nav-toggler .phone-btn {
         background: #fff;
         padding-left: 40px;
         padding-right: 40px;
+        display: flex;
+        justify-content: center;
     }
 }
 
@@ -2976,12 +2978,7 @@ body.nav-toggler .phone-btn {
     }
 }
 
-/* Login & Register buttons modern style */
-.primary-menu--dark .bgcclrlogin {
-    margin-left: 10px;
-}
-
-.primary-menu--dark .bgcclrlogin .primary-menu__link,
+/* Register button modern style */
 .primary-menu--dark .bgcreg .primary-menu__link {
     padding: 8px 18px !important;
     border-radius: 25px;
@@ -2991,21 +2988,42 @@ body.nav-toggler .phone-btn {
 
 @media screen and (min-width: 992px) {
 
+    /* Align login and register buttons vertically with nav items */
     .primary-menu--dark .bgcclrlogin,
     .primary-menu--dark .bgcreg {
         display: flex;
         align-items: center;
+        align-self: center;
     }
 
+    .primary-menu--dark .bgcreg .primary-menu__link {
+        background: linear-gradient(135deg, #f4841f 0%, #ff6b35 100%);
+        border: none;
+        color: #fff !important;
+        box-shadow: 0 4px 15px rgba(244, 132, 31, 0.3);
+        padding: 8px 18px !important;
+        border-radius: 25px;
+    }
+
+    .primary-menu--dark .bgcreg .primary-menu__link:hover {
+        background: linear-gradient(135deg, #ff6b35 0%, #f4841f 100%);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(244, 132, 31, 0.4);
+    }
+
+    /* Remove underline effect for register button */
+    .primary-menu--dark .bgcreg::after {
+        display: none !important;
+    }
+
+    /* Login button with oval shape */
     .primary-menu--dark .bgcclrlogin .primary-menu__link {
         background: #0094d9;
         border: none;
         color: #fff !important;
-        display: flex;
-        align-items: center;
-        height: auto;
-        line-height: normal;
         box-shadow: 0 4px 15px rgba(0, 148, 217, 0.3);
+        padding: 8px 18px !important;
+        border-radius: 25px;
     }
 
     .primary-menu--dark .bgcclrlogin .primary-menu__link:hover {
@@ -3015,26 +3033,8 @@ body.nav-toggler .phone-btn {
         box-shadow: 0 4px 15px rgba(0, 148, 217, 0.4);
     }
 
-    .primary-menu--dark .bgcreg .primary-menu__link {
-        background: linear-gradient(135deg, #f4841f 0%, #ff6b35 100%);
-        border: none;
-        color: #fff !important;
-        box-shadow: 0 4px 15px rgba(244, 132, 31, 0.3);
-        display: flex;
-        align-items: center;
-        height: auto;
-        line-height: normal;
-    }
-
-    .primary-menu--dark .bgcreg .primary-menu__link:hover {
-        background: linear-gradient(135deg, #ff6b35 0%, #f4841f 100%);
-        transform: translateY(-2px);
-        box-shadow: 0 6px 20px rgba(244, 132, 31, 0.4);
-    }
-
-    /* Remove underline effect for button links */
-    .primary-menu--dark .bgcclrlogin::after,
-    .primary-menu--dark .bgcreg::after {
+    /* Remove underline effect for login button */
+    .primary-menu--dark .bgcclrlogin::after {
         display: none !important;
     }
 }
@@ -3045,7 +3045,7 @@ body.nav-toggler .phone-btn {
 
 @media screen and (min-width: 992px) {
     .primary-menu__list {
-        margin-right: 2rem;
+        margin-right: 0;
     }
 
     .primary-menu__list:last-child {
@@ -3055,7 +3055,7 @@ body.nav-toggler .phone-btn {
 
 @media screen and (min-width: 1200px) {
     .primary-menu__list {
-        margin-right: 20px;
+        margin-right: 0;
     }
 }
 
